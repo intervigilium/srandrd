@@ -1,0 +1,12 @@
+[Unit]
+Description=srandrd
+Documentation=man:srandrd(1)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/srandrd -n $HOME/.local/bin/screenconfig
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=user-init.target
